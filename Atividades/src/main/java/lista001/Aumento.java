@@ -22,7 +22,9 @@ public class Aumento {
     }
 
     public void setSalario(float salario) {
-
+        if (salario < 0) {
+            throw new IllegalArgumentException("salario invalido");
+        }
         this.salario = salario;
     }
 
@@ -32,7 +34,9 @@ public class Aumento {
     }
 
     public void setPorcentagem(float porcentagem) {
-
+        if (porcentagem < 0 || porcentagem > 100) {
+            throw new IllegalArgumentException("porcentagem invalida");
+        }
         this.porcentagem = porcentagem;
     }
     public float PorcentagemAumento() {

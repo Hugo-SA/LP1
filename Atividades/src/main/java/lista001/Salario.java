@@ -20,6 +20,9 @@ public class Salario {
     }
 
     public void setBruto(float bruto) {
+        if (bruto < 0) {
+            throw new IllegalArgumentException("Salario bruto invalido");
+        }
         this.bruto = bruto;
     }
 
@@ -28,6 +31,9 @@ public class Salario {
     }
 
     public void setInss(float inss) {
+        if (inss < 0 || inss > 100) {
+            throw new IllegalArgumentException("Porcentagem inss invalida");
+        }
         this.inss = inss;
     }
 
@@ -36,6 +42,9 @@ public class Salario {
     }
 
     public void setHorasExtras(float horasExtras) {
+        if (horasExtras < 0) {
+            throw new IllegalArgumentException("hora extra invalida");
+        }
         this.horasExtras = horasExtras;
     }
 
@@ -44,6 +53,9 @@ public class Salario {
     }
 
     public void setValorHoraExtra(float valorHoraExtra) {
+        if (valorHoraExtra < 0) {
+            throw new IllegalArgumentException("valor da hora extra invalida");
+        }
         this.valorHoraExtra = valorHoraExtra;
     }
 
