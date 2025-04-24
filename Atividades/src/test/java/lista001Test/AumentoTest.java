@@ -1,3 +1,5 @@
+package lista001Test;
+
 import lista001.Aumento;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

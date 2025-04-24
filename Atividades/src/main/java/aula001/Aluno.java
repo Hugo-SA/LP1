@@ -36,7 +36,6 @@ public class Aluno{
         }
         this.nota2 = nota2;
     }
-
     public float somarNotas() {
         return this.nota1 + this.nota2;
     }
