@@ -16,14 +16,14 @@ public class CarroTest {
 
     @Test
     public void deveCalcularVelocidadeAtual() {
-        assertEquals(100, carro.Acelerar(100));
-        assertEquals(50, carro.Frear(200));
+        assertEquals(100, carro.acelerar(100));
+        assertEquals(50, carro.frear(200));
     }
     @Test
     public void deveTestarFreagemNegativa() {
         carro.setVelocidade_atual(100);
         try {
-            carro.Frear(-1);
+            carro.frear(-1);
             fail();
         }
         catch (IllegalArgumentException e) {
@@ -34,7 +34,7 @@ public class CarroTest {
     public void deveTestarVelocidadeNegativa(){
         carro.setVelocidade_atual(100);
         try {
-            carro.Frear(101);
+            carro.frear(101);
             fail();
         }
         catch (IllegalArgumentException e) {

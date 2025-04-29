@@ -52,14 +52,14 @@ public class Carro {
         this.estado = estado;
     }
 
-    public float Acelerar(float km){
+    public float acelerar(float km){
         if (km < 0) {
            return this.velocidade_atual = 0;
         } else {
             return this.velocidade_atual += km;
         }
     }
-    public float Frear(float km){
+    public float frear(float km){
         if (km < 0) {
             throw new IllegalArgumentException("A quantidade de km para frear não pode ser negativa.");
         }
