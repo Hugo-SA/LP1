@@ -60,7 +60,7 @@ public class Livro {
     }
     public float marcar_pagina(int paginaAtual){
         if (paginaAtual < 0 || paginaAtual > numero_paginas ){
-            throw new IllegalArgumentException("não é possível marcar essa página")
+            throw new IllegalArgumentException("não é possível marcar essa página");
         }
         return paginaAtual;
     }
