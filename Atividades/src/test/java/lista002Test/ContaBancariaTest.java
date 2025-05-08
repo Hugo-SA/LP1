@@ -21,7 +21,6 @@ public class ContaBancariaTest {
         contaBancaria.setSaldo(200);
         assertEquals(100, contaBancaria.saque(100));
     }
-    //fazer testes erros
     @Test
     public void deveTestarContaBancariaNegativa(){
         try {
@@ -29,11 +28,11 @@ public class ContaBancariaTest {
             fail();
         }
         catch (IllegalArgumentException e) {
-            assertEquals("O saldo deve ser maior do que zero.", e.getMessage());
+            assertEquals("O saldo deve ser maior ou igual a zero.", e.getMessage());
         }
     }
     @Test
-    public void deveTestarDepositoNegativo(){
+    public void deveTestarDepositoIrregular(){
         try {
             contaBancaria.depositar(-100);
             fail();

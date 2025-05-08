@@ -6,6 +6,28 @@ public class Livro {
     private String genero;
     private int ano_publicacao;
     private int numero_paginas;
+    private boolean aberto;
+    private int paginaAtual;
+
+    public Livro(){
+        this.aberto = false;
+    }
+
+    public boolean getAberto() {
+        return aberto;
+    }
+
+    public void setAberto(boolean aberto) {
+        this.aberto = aberto;
+    }
+
+    public int getPaginaAtual() {
+        return paginaAtual;
+    }
+
+    public void setPaginaAtual(int paginaAtual) {
+        this.paginaAtual = paginaAtual;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -48,26 +70,37 @@ public class Livro {
             throw new IllegalArgumentException("numero de paginas não pode ser menor ou igual a 0");
         }
         this.numero_paginas = numero_paginas;
-
     }
     public void abrir(){
-        String mensagem;
-        mensagem = "livro aberto";
+        if(this.aberto == true){
+            throw new IllegalArgumentException("livro ja esta aberto");
+        }
+        this.aberto = true;
+        this.paginaAtual = 1;
     }
     public void fechar(){
-        String mensagem;
-        mensagem = "livro fechado";
-    }
-    public float marcar_pagina(int paginaAtual){
-        if (paginaAtual < 0 || paginaAtual > numero_paginas ){
-            throw new IllegalArgumentException("não é possível marcar essa página");
+        if(! this.aberto){
+            throw new IllegalArgumentException("livro já está fechado");
         }
-        return paginaAtual;
+        this.aberto = false;
     }
-    public float retroceder_pagina(int paginaAtual){
+    public int marcar_pagina(int pagina){
+        if (pagina < 0 || pagina > numero_paginas ){
+            throw new IllegalArgumentException("nao e possivel marcar essa pagina");
+        }
+        return pagina;
+    }
+    public int retroceder_pagina(){
         if (paginaAtual <= 1 || paginaAtual > numero_paginas ){
-            throw new IllegalArgumentException("não é possivel retroceder esta página.");
+            throw new IllegalArgumentException("nao e possivel retroceder esta pagina.");
         }
-        return paginaAtual - 1;
+        return paginaAtual--;
         }
+    public int avancarPagina(){
+        if(paginaAtual == numero_paginas){
+            throw new IllegalArgumentException("nao possui mais páginas para avançar.");
+        }
+        return paginaAtual++;
+    }
 }
+

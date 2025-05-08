@@ -26,10 +26,10 @@ public class ContaBancaria {
     }
 
     public void setSaldo(float saldo) {
-        this.saldo = saldo;
-        if (saldo <= 0) {
-            throw new IllegalArgumentException("O saldo deve ser maior do que zero.");
+        if (saldo < 0) {
+            throw new IllegalArgumentException("O saldo deve ser maior ou igual a zero.");
         }
+        this.saldo = saldo;
     }
     public float depositar(float valor){
         if (valor <= 0) {

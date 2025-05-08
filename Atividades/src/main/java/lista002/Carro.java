@@ -1,78 +1,101 @@
 package lista002;
 
 public class Carro {
+
     private String marca;
     private String modelo;
-    private float ano;
-    private float velocidade_atual;
-    private boolean estado;
+    private int ano;
+    private int velocidadeAtual;
+    private boolean ligado;
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public Carro() {
+        this.velocidadeAtual = 0;
+        this.ligado = false;
     }
 
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public float getAno() {
-        return ano;
+    public String getModelo() {
+        return this.modelo;
     }
 
-    public void setAno(float ano) {
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return this.ano;
+    }
+
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
-    public float getVelocidade_atual() {
-        return velocidade_atual;
+    public int getVelocidadeAtual() {
+        return this.velocidadeAtual;
     }
 
-    public void setVelocidade_atual(float velocidade_atual) {
-        if (velocidade_atual < 0) {
-            this.velocidade_atual = 0;
-        } else {
-            this.velocidade_atual = velocidade_atual;
+    public void setVelocidadeAtual(int velocidadeAtual) {
+        if (! this.ligado) {
+            throw new IllegalArgumentException("Nao pode modificar velocidade com carro desligado");
         }
-    }
-
-
-    public boolean getEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-
-    public float acelerar(float km){
-        if (km < 0) {
-           return this.velocidade_atual = 0;
-        } else {
-            return this.velocidade_atual += km;
+        if (velocidadeAtual < 0) {
+            throw new IllegalArgumentException("Velocidade invalida");
         }
+        this.velocidadeAtual = velocidadeAtual;
     }
-    public float frear(float km){
-        if (km < 0) {
-            throw new IllegalArgumentException("A quantidade de km para frear não pode ser negativa.");
-        }
-        if (velocidade_atual < km) {
-            throw new IllegalArgumentException("A velocidade atual é menor do que a quantidade para frear.");
-        }
-        return this.velocidade_atual -= km;
+
+    public boolean isLigado() {
+        return this.ligado;
     }
-    public void desligar() {
-        estado = false;
-        velocidade_atual = 0;
+
+    public void setLigado(boolean ligado) {
+        this.ligado = ligado;
     }
+
     public void ligar() {
-        estado = true;
+        if (this.ligado) {
+            throw new IllegalArgumentException("Nao pode ligar carro ligado");
+        }
+        this.ligado = true;
     }
+
+    public void desligar() {
+        if (! this.ligado) {
+            throw new IllegalArgumentException("Nao pode desligar carro desligado");
+        }
+        if (this.velocidadeAtual > 0) {
+            throw new IllegalArgumentException("Nao pode desligar carro em movimento");
+        }
+        this.ligado = false;
+        this.velocidadeAtual = 0;
+    }
+
+    public void acelerar(int quantidade) {
+        if (! this.ligado) {
+            throw new IllegalArgumentException("Nao pode acelerar carro desligado");
+        }
+        if (quantidade <= 0) {
+            throw new IllegalArgumentException("Aceleracao invalida");
+        }
+        this.velocidadeAtual = this.velocidadeAtual + quantidade;
+    }
+
+    public void frear(int quantidade) {
+        if (! this.ligado) {
+            throw new IllegalArgumentException("Nao pode frear carro desligado");
+        }
+        if (quantidade > this.velocidadeAtual) {
+            throw new IllegalArgumentException("Nao pode frear alem da velocidade atual");
+        }
+        this.velocidadeAtual = this.velocidadeAtual - quantidade;
+    }
+
+
 }
