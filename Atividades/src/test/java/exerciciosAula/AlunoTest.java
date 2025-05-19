@@ -1,5 +1,6 @@
+package exerciciosAula;
 
-import aula001.Aluno;
+import ExerciciosAula.Aluno;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
