@@ -43,5 +43,11 @@ public abstract class Produto {
         }
         this.quantidadeEstoque = quantidadeEstoque;
     }
+    public void abaixarEstoque(int quantidade){
+        if(quantidade > quantidadeEstoque){
+            throw new IllegalArgumentException("estoque insuficiente");
+        }
+        quantidadeEstoque -= quantidade;
+    }
     public abstract float calcularPreco();
 }
