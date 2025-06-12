@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0168e292-098d-4676-91aa-0e8f52b46f69" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/ProdutoEletronico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/ProdutoRoupa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lista003_ex005Test/ProdutoEletronicoTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Hugo-SA"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hugo-SA/LP1.git",
+    "accountId": "9c3b6c27-4d9c-472c-aeeb-699690a42238"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2xdRouHvaZ5g9RJ7Aa5xs1S5fFD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ProdutoEletronicoTest.deveRetornarErroQuantidade.executor": "Run",
+    "JUnit.ProdutoEletronicoTest.deveRetornarValorComDescontoCheio.executor": "Run",
+    "JUnit.ProdutoEletronicoTest.deveRetornarValorComDescontoParcial.executor": "Run",
+    "JUnit.ProdutoEletronicoTest.deveRetornarValorSemDesconto.executor": "Run",
+    "JUnit.ProdutoTest.deveRetornarErro.executor": "Run",
+    "JUnit.ProdutoTest.deveRetornarErroNome.executor": "Run",
+    "JUnit.VooDomesticoTest.DeveCalcularVooDomestico.executor": "Run",
+    "JUnit.VooInternacionalTest.DeveCalcularVooDomestico.executor": "Run",
+    "JUnit.VooTest.deveRetornarErro.executor": "Run",
+    "JUnit.VooTest.deveRetornarErroDataVoo.executor": "Run",
+    "JUnit.VooTest.origemInvalida.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "lista3",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.ProdutoEletronicoTest.deveRetornarErroQuantidade">
+    <configuration name="ProdutoEletronicoTest.deveRetornarErroNome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Atividades" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lista003_ex005Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lista003_ex005Test" />
+      <option name="MAIN_CLASS_NAME" value="lista003_ex005Test.ProdutoEletronicoTest" />
+      <option name="METHOD_NAME" value="deveRetornarErroNome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProdutoEletronicoTest.deveRetornarErroQuantidade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Atividades" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lista003_ex005Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lista003_ex005Test" />
+      <option name="MAIN_CLASS_NAME" value="lista003_ex005Test.ProdutoEletronicoTest" />
+      <option name="METHOD_NAME" value="deveRetornarErroQuantidade" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProdutoEletronicoTest.deveRetornarValorComDescontoCheio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Atividades" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lista003_ex005Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lista003_ex005Test" />
+      <option name="MAIN_CLASS_NAME" value="lista003_ex005Test.ProdutoEletronicoTest" />
+      <option name="METHOD_NAME" value="deveRetornarValorComDescontoCheio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProdutoEletronicoTest.deveRetornarValorComDescontoParcial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Atividades" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lista003_ex005Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lista003_ex005Test" />
+      <option name="MAIN_CLASS_NAME" value="lista003_ex005Test.ProdutoEletronicoTest" />
+      <option name="METHOD_NAME" value="deveRetornarValorComDescontoParcial" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProdutoEletronicoTest.deveRetornarValorSemDesconto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Atividades" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lista003_ex005Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lista003_ex005Test" />
+      <option name="MAIN_CLASS_NAME" value="lista003_ex005Test.ProdutoEletronicoTest" />
+      <option name="METHOD_NAME" value="deveRetornarValorSemDesconto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProdutoEletronicoTest.deveRetornarErroQuantidade" />
+        <item itemvalue="JUnit.ProdutoEletronicoTest.deveRetornarValorSemDesconto" />
+        <item itemvalue="JUnit.ProdutoEletronicoTest.deveRetornarValorComDescontoParcial" />
+        <item itemvalue="JUnit.ProdutoEletronicoTest.deveRetornarValorComDescontoCheio" />
+        <item itemvalue="JUnit.ProdutoEletronicoTest.deveRetornarErroNome" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0168e292-098d-4676-91aa-0e8f52b46f69" name="Changes" comment="" />
+      <created>1748266142582</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748266142582</updated>
+    </task>
+    <servers />
+  </component>
+</project>
