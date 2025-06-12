@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0168e292-098d-4676-91aa-0e8f52b46f69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/ProdutoEletronico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lista003_ex005/ProdutoRoupa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lista003_ex005Test/ProdutoEletronicoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b087ce38-7dc6-45fb-9506-0b408a30ba48" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,21 +20,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Hugo-SA"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Hugo-SA&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hugo-SA/LP1.git",
-    "accountId": "9c3b6c27-4d9c-472c-aeeb-699690a42238"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hugo-SA/LP1.git&quot;,
+    &quot;accountId&quot;: &quot;9c3b6c27-4d9c-472c-aeeb-699690a42238&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2xdRouHvaZ5g9RJ7Aa5xs1S5fFD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,7 +55,6 @@
     "JUnit.VooTest.origemInvalida.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "lista3",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
