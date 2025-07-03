@@ -1,25 +1,23 @@
 package lista004_ex001;
 
 import java.util.ArrayList;
-import java.util.List;
-
 public class Contribuinte {
     private int codigo;
     private String nome;
-    private List<Imovel> imoveis = new ArrayList<>();
+    private ArrayList<Imovel> imoveis;
 
-    public Contribuinte(int codigo, String nome){
-        this.codigo = codigo;
-        this.nome = nome;
+    public Contribuinte(){
+        this.imoveis = new ArrayList<Imovel>();
     }
-
-    public void adicionarImovel(Imovel imovel) {
-        if(!imoveis.contains(imovel)){
-            imoveis.add(imovel);
+    public void adicionarImovel(Imovel imovel){
+        this.imoveis.add(imovel);
+    }
+    public void retirarImovel(Imovel imovel){
+        if(getNumeroImoveis() == 0){
+            throw new IllegalArgumentException("nao possui imoveis para remover");
         }
+        this.imoveis.remove(imovel);
     }
-
-
     public int getCodigo() {
         return codigo;
     }
@@ -35,12 +33,7 @@ public class Contribuinte {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public List<Imovel> getImoveis() {
-        return imoveis;
-    }
-
-    public void setImoveis(List<Imovel> imoveis) {
-        this.imoveis = imoveis;
+    public int getNumeroImoveis(){
+        return this.imoveis.size();
     }
 }

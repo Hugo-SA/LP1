@@ -4,17 +4,14 @@ public class Casa extends Imovel{
     private double metragemTerrenoCasa;
     private double metragemConstrucao;
 
-    public Casa(Contribuinte proprietario, double metragemTerrenoCasa, double metragemConstrucao){
-        super(proprietario);
-        this.metragemTerrenoCasa = metragemTerrenoCasa;
-        this.metragemConstrucao = metragemConstrucao;
-    }
-
     public double getMetragemConstrucao() {
         return metragemConstrucao;
     }
 
     public void setMetragemConstrucao(double metragemConstrucao) {
+        if(metragemConstrucao <= 0){
+            throw new IllegalArgumentException("metragem construcao errada");
+        }
         this.metragemConstrucao = metragemConstrucao;
     }
 
@@ -23,11 +20,14 @@ public class Casa extends Imovel{
     }
 
     public void setMetragemTerrenoCasa(double metragemTerrenoCasa) {
+        if(metragemTerrenoCasa <= 0){
+            throw new IllegalArgumentException("metragem terreno invalida");
+        }
         this.metragemTerrenoCasa = metragemTerrenoCasa;
     }
 
     @Override
     public double calcularValor() {
-        return ;
+        return (getMetragemTerrenoCasa()*30.0) + (getMetragemConstrucao() * 50.0);
     }
 }

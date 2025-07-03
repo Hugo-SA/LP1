@@ -2,10 +2,7 @@ package lista004_ex001;
 
 public class Lote extends Imovel{
     private double metragemTerreno;
-    public Lote(Contribuinte proprietario, double metragemTerreno){
-        super(proprietario);
-        this.metragemTerreno = metragemTerreno;
-    }
+
     @Override
     public double calcularValor(){
         return metragemTerreno * 30.0;
@@ -16,6 +13,9 @@ public class Lote extends Imovel{
     }
 
     public void setMetragemTerreno(double metragemTerreno) {
+        if(metragemTerreno <= 0){
+            throw new IllegalArgumentException("metragem invalida");
+        }
         this.metragemTerreno = metragemTerreno;
     }
 }
