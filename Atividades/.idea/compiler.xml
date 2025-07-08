@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <bytecodeTargetLevel>
-      <module name="Atividades" target="17" />
-    </bytecodeTargetLevel>
-=======
-=======
->>>>>>> 9473e2a34e3c5fca4e5b3c099c77cc0fa9b71d24
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Atividades" />
       </profile>
     </annotationProcessing>
-<<<<<<< HEAD
->>>>>>> 9473e2a34e3c5fca4e5b3c099c77cc0fa9b71d24
-=======
->>>>>>> 9473e2a34e3c5fca4e5b3c099c77cc0fa9b71d24
   </component>
 </project>
