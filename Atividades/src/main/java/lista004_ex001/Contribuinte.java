@@ -36,4 +36,13 @@ public class Contribuinte {
     public int getNumeroImoveis(){
         return this.imoveis.size();
     }
+    public double calcularValor() {
+        double preco;
+        double totalImoveis = 0.00f;
+        for (Imovel imovel : this.imoveis) {
+            preco = imovel.calcularValor();
+            totalImoveis += preco;
+        }
+        return totalImoveis;
+    }
 }

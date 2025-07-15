@@ -1,8 +1,8 @@
 package lista004_ex005;
 
-public class CPU extends Manutencao{
+public class Impressora extends Manutencao{
     private float maodeObra;
-    private float valorTrocas;
+    private float valorTrca;
 
     public float getMaodeObra() {
         return maodeObra;
@@ -12,16 +12,16 @@ public class CPU extends Manutencao{
         this.maodeObra = maodeObra;
     }
 
-    public float getValorTrocas() {
-        return valorTrocas;
+    public float getValorTrca() {
+        return valorTrca;
     }
 
-    public void setValorTrocas(float valorTrocas) {
-        this.valorTrocas = valorTrocas;
+    public void setValorTrca(float valorTrca) {
+        this.valorTrca = valorTrca;
     }
 
     @Override
     public double calculaValor() {
-        return getMaodeObra() + getValorTrocas();
+        return getMaodeObra() + getValorTrca();
     }
 }

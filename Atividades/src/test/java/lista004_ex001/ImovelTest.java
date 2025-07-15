@@ -46,4 +46,21 @@ class ImovelTest {
             assertEquals("nao possui imoveis para remover", e.getMessage());
         }
     }
+    @Test
+    public void deveCalcularValorTotal(){
+        Contribuinte contribuinte = new Contribuinte();
+        Casa imovel = new Casa();
+        Apartamento imovel2 = new Apartamento();
+        contribuinte.adicionarImovel(imovel);
+        contribuinte.adicionarImovel(imovel2);
+        Lote imovel3 = new Lote();
+        contribuinte.adicionarImovel(imovel3);
+        imovel.setMetragemTerrenoCasa(10);
+        imovel.setMetragemConstrucao(10);
+        imovel2.setMetragemApartamento(10);
+        imovel2.setAndar(1);
+        imovel3.setMetragemTerreno(10);
+        assertEquals(800.0f, imovel.calcularValor());
+    }
+
 }
