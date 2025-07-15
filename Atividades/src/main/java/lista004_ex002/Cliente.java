@@ -42,4 +42,14 @@ public class Cliente {
             contas.add(conta);
         }
     }
+    public double calcularconta() {
+        double saldo;
+        double totalConta = 0.0f;
+        for (Conta conta : this.contas) {
+            saldo = conta.consultaSaldo();
+            totalConta += saldo;
+        }
+        return totalConta;
+    }
+
 }

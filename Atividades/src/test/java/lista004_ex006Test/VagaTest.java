@@ -43,4 +43,18 @@ public class VagaTest {
         semanal.setSemanas(2);
         assertEquals(8, semanal.valorAluguel());
     }
+    @Test
+    public void deveCalcularOrcamentoEstacionamento(){
+        Cliente cliente = new Cliente();
+        VagaDiaria diaria = new VagaDiaria();
+        cliente.adicionarVaga(diaria);
+        diaria.setDias(2);
+        VagaMensal mensal = new VagaMensal();
+        cliente.adicionarVaga(mensal);
+        mensal.setMeses(2);
+        VagaSemanal semanal = new VagaSemanal();
+        cliente.adicionarVaga(semanal);
+        semanal.setSemanas(2);
+        assertEquals(400, cliente.calcularQuantVagas());
+    }
 }

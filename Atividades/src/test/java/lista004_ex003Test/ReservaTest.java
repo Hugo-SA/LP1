@@ -57,4 +57,20 @@ public class ReservaTest {
             assertEquals("dias errado", e.getMessage());
         }
     }
+    @Test
+    public void deveRetornarValorReservas(){
+        Hospede hospede = new Hospede();
+        Single reserva1 = new Single();
+        Duplo reserva2 = new Duplo();
+        Triplo reserva3 = new Triplo();
+        hospede.adicionar(reserva1);
+        hospede.adicionar(reserva2);
+        hospede.adicionar(reserva3);
+        reserva1.setNumDias(2);
+        reserva2.setNumDias(2);
+        reserva2.setNumRefeicoes(3);
+        reserva3.setNumDias(2);
+        reserva3.setNumRefeicoes(3);
+        assertEquals(520, hospede.calcularFolhaPagamento());
+    }
 }

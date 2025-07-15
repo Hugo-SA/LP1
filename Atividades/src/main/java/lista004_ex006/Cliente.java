@@ -42,4 +42,14 @@ public class Cliente {
     public int getNumVagas(){
         return this.vagas.size();
     }
+    public float calcularQuantVagas() {
+        float valor;
+        float orcamento = 0.0f;
+        for (Vaga vaga : this.vagas) {
+            valor = vaga.valorAluguel();
+            orcamento += valor;
+        }
+        return orcamento;
+    }
+
 }

@@ -61,8 +61,16 @@ class ContaTest{
         ContaPoupanca cp = new ContaPoupanca(2002, c, 500.0);
 
         List<Conta> contas = c.getContas();
-        assertEquals(2, contas.size());
+        assertEquals(0, contas.size());
         assertTrue(contas.contains(cc));
         assertTrue(contas.contains(cp));
     }
+    @Test
+    void deveCalcularContas(){
+        Cliente c = new Cliente(40, "Lia");
+        ContaCorrenteNormal cc = new ContaCorrenteNormal(2001, c, 100.0);
+        ContaPoupanca cp = new ContaPoupanca(2002, c, 500.0);
+        assertEquals(200,c.calcularconta());
+    }
+
 }

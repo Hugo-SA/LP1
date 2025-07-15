@@ -42,4 +42,14 @@ public class Hospede {
     public int getNumReservas(){
         return this.reservas.size();
     }
+    public double calcularFolhaPagamento() {
+        double valor;
+        double totalReservas = 0.0f;
+        for (Reserva reserva : this.reservas) {
+            valor = reserva.ValorReserva();
+            totalReservas += valor;
+        }
+        return totalReservas;
+    }
+
 }

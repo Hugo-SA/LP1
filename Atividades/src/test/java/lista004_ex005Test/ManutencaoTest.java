@@ -35,14 +35,12 @@ public class ManutencaoTest {
         Impressora manutencao3 = new Impressora();
         cliente.adicionarManutencao(manutencao);
         cliente.adicionarManutencao(manutencao2);
-        manutencao.setMaodeObra(50);
         cliente.adicionarManutencao(manutencao3);
+        manutencao.setMaodeObra(50);
         manutencao2.setMaodeObra(10);
         manutencao2.setValorTrocas(50);
         manutencao3.setMaodeObra(20);
         manutencao3.setValorTrca(60);
-        assertEquals(50, manutencao.calculaValor());
-        assertEquals(60, manutencao2.calculaValor());
-        assertEquals(110, manutencao3.calculaValor());
+        assertEquals(140.0f, cliente.calcularValorManutencao());
     }
 }

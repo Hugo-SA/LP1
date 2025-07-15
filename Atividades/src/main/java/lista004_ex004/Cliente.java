@@ -41,4 +41,14 @@ public class Cliente {
     public int getNumFretes(){
         return this.fretes.size();
     }
+    public double calcularFretamento() {
+        double entrega;
+        double orcamento = 0.0f;
+        for (Frete frete : this.fretes) {
+            entrega = frete.calculoFrete();
+            orcamento += entrega;
+        }
+        return orcamento;
+    }
+
 }

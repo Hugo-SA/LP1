@@ -29,19 +29,19 @@ public class FreteTest {
     }
     @Test
     public void deveCalcularValorFretes(){
-        Cliente cliente = new Cliente();
-        FreteNormal frete1 = new FreteNormal();
-        FreteEspecial frete2 = new FreteEspecial();
-        FreteUrgente frete3 = new FreteUrgente();
-        cliente.adicionar(frete1);
-        frete1.setTaxa(50);
-        cliente.adicionar(frete2);
-        frete2.setTaxaEntrega(10);
-        frete2.setValor(50);
-        cliente.adicionar(frete3);
-        frete3.setQuantItem(5);
-        frete3.setTaxaEntrega(10);
-        frete3.setValor(50);
+            Cliente cliente = new Cliente();
+            FreteNormal frete1 = new FreteNormal();
+            FreteEspecial frete2 = new FreteEspecial();
+            FreteUrgente frete3 = new FreteUrgente();
+            cliente.adicionar(frete1);
+            frete1.setTaxa(50);
+            cliente.adicionar(frete2);
+            frete2.setTaxaEntrega(10);
+            frete2.setValor(50);
+            cliente.adicionar(frete3);
+            frete3.setQuantItem(5);
+            frete3.setTaxaEntrega(10);
+            frete3.setValor(50);
         assertEquals(50,frete1.calculoFrete());
         assertEquals(60, frete2.calculoFrete());
         assertEquals(110, frete3.calculoFrete());
@@ -81,5 +81,22 @@ public class FreteTest {
         }catch (IllegalArgumentException e){
             assertEquals("quantidade invalida",e.getMessage());
         }
+    }
+    @Test
+    public void deveCalcularFretamento(){
+        Cliente cliente = new Cliente();
+        FreteNormal frete1 = new FreteNormal();
+        FreteEspecial frete2 = new FreteEspecial();
+        FreteUrgente frete3 = new FreteUrgente();
+        cliente.adicionar(frete1);
+        frete1.setTaxa(50);
+        cliente.adicionar(frete2);
+        frete2.setTaxaEntrega(10);
+        frete2.setValor(50);
+        cliente.adicionar(frete3);
+        frete3.setQuantItem(5);
+        frete3.setTaxaEntrega(10);
+        frete3.setValor(50);
+        assertEquals(220, cliente.calcularFretamento());
     }
 }

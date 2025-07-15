@@ -40,4 +40,13 @@ public class ClienteManutencao {
     public int getNumManutencoes(){
         return this.manutencoes.size();
     }
+    public double calcularValorManutencao() {
+        double valor;
+        double orcamento = 0.0f;
+        for (Manutencao manutencao : this.manutencoes) {
+            valor = manutencao.calculaValor();
+            orcamento += valor;
+        }
+        return orcamento;
+    }
 }
