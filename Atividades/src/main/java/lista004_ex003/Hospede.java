@@ -38,7 +38,6 @@ public class Hospede {
     public void adicionar(Reserva reserva){
         this.reservas.add(reserva);
     }
-
     public int getNumReservas(){
         return this.reservas.size();
     }
@@ -51,5 +50,11 @@ public class Hospede {
         }
         return totalReservas;
     }
-
+    public ArrayList<Integer> obterNumContas() {
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        for (Reserva reserva : this.reservas) {
+            num.add(reserva.getNumQuarto());
+        }
+        return num;
+    }
 }

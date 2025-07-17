@@ -60,7 +60,7 @@ class ImovelTest {
         imovel2.setMetragemApartamento(10);
         imovel2.setAndar(1);
         imovel3.setMetragemTerreno(10);
-        assertEquals(800.0f, imovel.calcularValor());
+        assertEquals(1460.0f, contribuinte.calcularValorTotal());
     }
     @Test
     public void deveRetornarLista(){

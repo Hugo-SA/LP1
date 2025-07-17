@@ -46,7 +46,7 @@ public class Contribuinte {
         return resultado;
     }
 
-    public double calcularValor() {
+    public double calcularValorTotal() {
         double preco;
         double totalImoveis = 0.00f;
         for (Imovel imovel : this.imoveis) {
