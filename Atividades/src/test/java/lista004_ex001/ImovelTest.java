@@ -2,7 +2,7 @@ package lista004_ex001;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.List;
+import java.util.ArrayList;
 
 class ImovelTest {
 
@@ -61,6 +61,24 @@ class ImovelTest {
         imovel2.setAndar(1);
         imovel3.setMetragemTerreno(10);
         assertEquals(800.0f, imovel.calcularValor());
+    }
+    @Test
+    public void deveRetornarLista(){
+        Contribuinte contribuinte = new Contribuinte();
+        Casa imovel = new Casa();
+        imovel.setTipo("casa");
+        Apartamento imovel2 = new Apartamento();
+        imovel2.setTipo("apartamento");
+        contribuinte.adicionarImovel(imovel);
+        contribuinte.adicionarImovel(imovel2);
+        Lote imovel3 = new Lote();
+        contribuinte.adicionarImovel(imovel3);
+        imovel3.setTipo("lote");
+        ArrayList<String> resultado = new ArrayList<String>();
+        resultado.add("casa");
+        resultado.add("apartamento");
+        resultado.add("lote");
+        assertEquals(resultado, contribuinte.obterListaImoveis());
     }
 
 }

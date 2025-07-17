@@ -1,16 +1,13 @@
 package lista004_ex002;
 
 import java.util.ArrayList;
-import java.util.List;
-
 public class Cliente {
     private String nome;
     private int codigo;
-    private List<Conta> contas = new ArrayList<>();
+    private ArrayList<Conta> contas;
 
-    public Cliente(int codigo, String nome) {
-        this.codigo = codigo;
-        this.nome = nome;
+    public Cliente() {
+        this.contas = new ArrayList<Conta>();
     }
 
     public String getNome() {
@@ -29,12 +26,15 @@ public class Cliente {
         this.codigo = codigo;
     }
 
-    public List<Conta> getContas() {
+    public ArrayList<Conta> getContas() {
         return contas;
     }
 
-    public void setContas(List<Conta> contas) {
+    public void setContas(ArrayList<Conta> contas) {
         this.contas = contas;
+    }
+    public int quantidadeContas(){
+        return this.contas.size();
     }
 
     public void adicionarConta(Conta conta) {
@@ -50,6 +50,13 @@ public class Cliente {
             totalConta += saldo;
         }
         return totalConta;
+    }
+    public ArrayList<Integer> obterNumContas() {
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        for (Conta conta : this.contas) {
+            num.add(conta.getNum());
+        }
+        return num;
     }
 
 }

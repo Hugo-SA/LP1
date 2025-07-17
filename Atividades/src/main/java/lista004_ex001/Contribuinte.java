@@ -1,6 +1,7 @@
 package lista004_ex001;
 
 import java.util.ArrayList;
+
 public class Contribuinte {
     private int codigo;
     private String nome;
@@ -36,6 +37,15 @@ public class Contribuinte {
     public int getNumeroImoveis(){
         return this.imoveis.size();
     }
+
+    public ArrayList<String> obterListaImoveis() {
+        ArrayList<String> resultado = new ArrayList<String>();
+        for (Imovel imovel : this.imoveis) {
+            resultado.add(imovel.getTipo());
+        }
+        return resultado;
+    }
+
     public double calcularValor() {
         double preco;
         double totalImoveis = 0.00f;

@@ -3,74 +3,62 @@ package lista004_ex002Test;
 import lista004_ex002.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.List;
+
+import java.util.ArrayList;
 
 class ContaTest{
-
     @Test
-    void testCriacaoClienteEGetters() {
-        Cliente c = new Cliente(10, "Ana");
-        assertEquals(10, c.getCodigo());
-        assertEquals("Ana", c.getNome());
-        assertNotNull(c.getContas());
-        assertTrue(c.getContas().isEmpty());
-    }
-
-    @Test
-    void testAssociacaoClienteConta() {
-        Cliente c = new Cliente(20, "Pedro");
-        ContaCorrenteNormal cc = new ContaCorrenteNormal(1001, c, 500.0);
-
-        List<Conta> contas = c.getContas();
-        assertEquals(1, contas.size());
-        assertTrue(contas.contains(cc));
-    }
-
-    @Test
-    void testContaCorrenteNormalSaldo() {
-        Cliente c = new Cliente(30, "Lucas");
-        ContaCorrenteNormal cc = new ContaCorrenteNormal(1002, c, 200.0);
-
-        assertEquals(200.0, cc.consultaSaldo());
-        assertEquals(200.0, cc.getSaldoDisponivel());
-    }
-
-    @Test
-    void testContaCorrenteEspecialSaldo() {
-        Cliente c = new Cliente(31, "Julia");
-        ContaCorrenteEspecial ce = new ContaCorrenteEspecial(1003, c, 300.0, 150.0);
-
-        assertEquals(450.0, ce.consultaSaldo()); // saldo + limite
-        assertEquals(300.0, ce.getSaldoDisponivel());
-        assertEquals(150.0, ce.getLimiteCredito());
-    }
-
-    @Test
-    void testContaPoupancaSaldo() {
-        Cliente c = new Cliente(32, "Carlos");
-        ContaPoupanca cp = new ContaPoupanca(1004, c, 800.0);
-
-        assertEquals(800.0, cp.consultaSaldo());
-        assertEquals(800.0, cp.getSaldoDisponivel());
-    }
-
-    @Test
-    void testConsultaDeContasPorCliente() {
-        Cliente c = new Cliente(40, "Lia");
-        ContaCorrenteNormal cc = new ContaCorrenteNormal(2001, c, 100.0);
-        ContaPoupanca cp = new ContaPoupanca(2002, c, 500.0);
-
-        List<Conta> contas = c.getContas();
-        assertEquals(0, contas.size());
-        assertTrue(contas.contains(cc));
-        assertTrue(contas.contains(cp));
+    void deveRetornarZeroContas(){
+        Cliente cliente = new Cliente();
+        assertEquals(0, cliente.quantidadeContas());
     }
     @Test
-    void deveCalcularContas(){
-        Cliente c = new Cliente(40, "Lia");
-        ContaCorrenteNormal cc = new ContaCorrenteNormal(2001, c, 100.0);
-        ContaPoupanca cp = new ContaPoupanca(2002, c, 500.0);
-        assertEquals(200,c.calcularconta());
+    void deveRetornarUmaConta(){
+        Cliente cliente = new Cliente();
+        ContaPoupanca contaPoupanca = new ContaPoupanca();
+        cliente.adicionarConta(contaPoupanca);
+        assertEquals(1, cliente.quantidadeContas());
     }
-
+    @Test
+    void deveRetornarMaisDeUmaConta(){
+        Cliente cliente = new Cliente();
+        ContaPoupanca contaPoupanca = new ContaPoupanca();
+        cliente.adicionarConta(contaPoupanca);
+        ContaCorrenteEspecial contaCorrenteEspecial = new ContaCorrenteEspecial();
+        cliente.adicionarConta(contaCorrenteEspecial);
+        assertEquals(2, cliente.quantidadeContas());
+    }
+    @Test
+    void deveCalcularSaldoContas(){
+        Cliente cliente = new Cliente();
+        ContaPoupanca contaPoupanca = new ContaPoupanca();
+        cliente.adicionarConta(contaPoupanca);
+        ContaCorrenteEspecial contaCorrenteEspecial = new ContaCorrenteEspecial();
+        cliente.adicionarConta(contaCorrenteEspecial);
+        ContaCorrenteNormal contaCorrenteNormal = new ContaCorrenteNormal();
+        cliente.adicionarConta(contaCorrenteNormal);
+        contaCorrenteNormal.setSaldoDisponivel(100);
+        contaCorrenteEspecial.setSaldoDisponivel(100);
+        contaCorrenteEspecial.setLimiteCredito(100);
+        contaPoupanca.setSaldoDisponivel(100);
+        assertEquals(400, cliente.calcularconta());
+    }
+    @Test
+    void deveRetornarListaNumContas() {
+        ContaPoupanca conta1 = new ContaPoupanca();
+        conta1.setNum(12);
+        ContaCorrenteNormal conta2 = new ContaCorrenteNormal();
+        conta2.setNum(24);
+        ContaCorrenteEspecial conta3 = new ContaCorrenteEspecial();
+        conta3.setNum(36);
+        Cliente cliente = new Cliente();
+        cliente.adicionarConta(conta1);
+        cliente.adicionarConta(conta2);
+        cliente.adicionarConta(conta3);
+        ArrayList<Integer> infosBancarias = new ArrayList<Integer>();
+        infosBancarias.add(12);
+        infosBancarias.add(24);
+        infosBancarias.add(36);
+        assertEquals(infosBancarias, cliente.obterNumContas());
+    }
 }
