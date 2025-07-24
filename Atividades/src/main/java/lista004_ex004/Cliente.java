@@ -1,5 +1,7 @@
 package lista004_ex004;
 
+import lista004_ex001.Imovel;
+
 import java.util.ArrayList;
 
 public class Cliente {
@@ -49,6 +51,17 @@ public class Cliente {
             orcamento += entrega;
         }
         return orcamento;
+    }
+    public int getNumeroFretes(){
+        return this.fretes.size();
+    }
+
+    public ArrayList<Integer> obterListaFretes() {
+        ArrayList<Integer> viagens = new ArrayList<Integer>();
+        for (Frete frete : this.fretes) {
+            viagens.add(frete.getNumFrete());
+        }
+        return viagens;
     }
 
 }

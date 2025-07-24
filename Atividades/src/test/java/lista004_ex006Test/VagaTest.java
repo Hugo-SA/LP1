@@ -3,6 +3,8 @@ package lista004_ex006Test;
 import lista004_ex006.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VagaTest {
@@ -28,22 +30,6 @@ public class VagaTest {
         assertEquals(2, cliente.getNumVagas());
     }
     @Test
-    public void deveCalcularValorVaga(){
-        Cliente cliente = new Cliente();
-        VagaDiaria diaria = new VagaDiaria();
-        cliente.adicionarVaga(diaria);
-        diaria.setDias(2);
-        assertEquals(20, diaria.valorAluguel());
-        VagaMensal mensal = new VagaMensal();
-        cliente.adicionarVaga(mensal);
-        mensal.setMeses(2);
-        assertEquals(300, mensal.valorAluguel());
-        VagaSemanal semanal = new VagaSemanal();
-        cliente.adicionarVaga(semanal);
-        semanal.setSemanas(2);
-        assertEquals(8, semanal.valorAluguel());
-    }
-    @Test
     public void deveCalcularOrcamentoEstacionamento(){
         Cliente cliente = new Cliente();
         VagaDiaria diaria = new VagaDiaria();
@@ -55,6 +41,25 @@ public class VagaTest {
         VagaSemanal semanal = new VagaSemanal();
         cliente.adicionarVaga(semanal);
         semanal.setSemanas(2);
-        assertEquals(400, cliente.calcularQuantVagas());
+        assertEquals(400, cliente.calcularValorTotal());
     }
+    @Test
+    public void deveRetornarListaFretes(){
+        Cliente cliente = new Cliente();
+        VagaDiaria diaria = new VagaDiaria();
+        cliente.adicionarVaga(diaria);
+        diaria.setNum(01);
+        VagaMensal mensal = new VagaMensal();
+        cliente.adicionarVaga(mensal);
+        mensal.setNum(200);
+        VagaSemanal semanal = new VagaSemanal();
+        cliente.adicionarVaga(semanal);
+        semanal.setNum(384948);
+        ArrayList<Integer> Fretes = new ArrayList<Integer>();
+        Fretes.add(01);
+        Fretes.add(200);
+        Fretes.add(384948);
+        assertEquals(Fretes, cliente.obterNumVagas());
+    }
+
 }

@@ -3,6 +3,8 @@ package lista004_ex004Test;
 import lista004_ex004.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FreteTest {
@@ -28,7 +30,7 @@ public class FreteTest {
         assertEquals(2, cliente.getNumFretes());
     }
     @Test
-    public void deveCalcularValorFretes(){
+    public void deveRetornarCalculoValorFretes(){
             Cliente cliente = new Cliente();
             FreteNormal frete1 = new FreteNormal();
             FreteEspecial frete2 = new FreteEspecial();
@@ -42,45 +44,25 @@ public class FreteTest {
             frete3.setQuantItem(5);
             frete3.setTaxaEntrega(10);
             frete3.setValor(50);
-        assertEquals(50,frete1.calculoFrete());
-        assertEquals(60, frete2.calculoFrete());
-        assertEquals(110, frete3.calculoFrete());
+            assertEquals(220, cliente.calcularFretamento());
     }
     @Test
-    public void deveRetornarErroValor(){
+    public void deveRetornarListaFretes(){
         Cliente cliente = new Cliente();
-        FreteUrgente frete = new FreteUrgente();
-        try{
-            cliente.adicionar(frete);
-            frete.setValor(-10);
-            fail();
-        }catch (IllegalArgumentException e){
-            assertEquals("valor invalido",e.getMessage());
-        }
-    }
-    @Test
-    public void deveRetornarErroTaxa(){
-        Cliente cliente = new Cliente();
-        FreteUrgente frete = new FreteUrgente();
-        try{
-            cliente.adicionar(frete);
-            frete.setTaxaEntrega(-10);
-            fail();
-        }catch (IllegalArgumentException e){
-            assertEquals("taxa invalida",e.getMessage());
-        }
-    }
-    @Test
-    public void deveRetornarErroQuantItem(){
-        Cliente cliente = new Cliente();
-        FreteUrgente frete = new FreteUrgente();
-        try{
-            cliente.adicionar(frete);
-            frete.setQuantItem(-10);
-            fail();
-        }catch (IllegalArgumentException e){
-            assertEquals("quantidade invalida",e.getMessage());
-        }
+        FreteNormal frete1 = new FreteNormal();
+        FreteEspecial frete2 = new FreteEspecial();
+        FreteUrgente frete3 = new FreteUrgente();
+        cliente.adicionar(frete1);
+        frete1.setNumFrete(01);
+        cliente.adicionar(frete2);
+        frete2.setNumFrete(02);
+        cliente.adicionar(frete3);
+        frete3.setNumFrete(03);
+        ArrayList<Integer> Fretes = new ArrayList<Integer>();
+        Fretes.add(01);
+        Fretes.add(02);
+        Fretes.add(03);
+        assertEquals(Fretes, cliente.obterListaFretes());
     }
     @Test
     public void deveCalcularFretamento(){

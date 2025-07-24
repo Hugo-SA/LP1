@@ -1,5 +1,7 @@
 package lista004_ex006;
 
+import lista004_ex003.Reserva;
+
 import java.util.ArrayList;
 
 public class Cliente {
@@ -42,7 +44,7 @@ public class Cliente {
     public int getNumVagas(){
         return this.vagas.size();
     }
-    public float calcularQuantVagas() {
+    public float calcularValorTotal() {
         float valor;
         float orcamento = 0.0f;
         for (Vaga vaga : this.vagas) {
@@ -50,6 +52,16 @@ public class Cliente {
             orcamento += valor;
         }
         return orcamento;
+    }
+    public int getNumReservas(){
+        return this.vagas.size();
+    }
+    public ArrayList<Integer> obterNumVagas() {
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        for (Vaga vaga : this.vagas) {
+            num.add(vaga.getNum());
+        }
+        return num;
     }
 
 }

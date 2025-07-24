@@ -9,6 +9,9 @@ public class VagaSemanal extends Vaga{
     }
 
     public void setSemanas(int semanas) {
+        if(semanas <= 0){
+            throw new IllegalArgumentException("numero invalido");
+        }
         this.semanas = semanas;
     }
 

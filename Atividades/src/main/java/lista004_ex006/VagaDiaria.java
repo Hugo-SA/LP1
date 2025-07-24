@@ -9,6 +9,9 @@ public class VagaDiaria extends Vaga{
     }
 
     public void setDias(int dias) {
+        if(dias <= 0){
+            throw new IllegalArgumentException("dias invalidos");
+        }
         this.dias = dias;
     }
 

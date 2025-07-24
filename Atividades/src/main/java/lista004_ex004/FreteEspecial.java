@@ -9,7 +9,7 @@ public class FreteEspecial extends Frete{
     }
 
     public void setValor(float valor) {
-        if(valor <= 0){
+        if(valor < 0){
             throw new IllegalArgumentException("valor invalido");
         }
         Valor = valor;
